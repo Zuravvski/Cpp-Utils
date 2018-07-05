@@ -2,20 +2,26 @@
 
 #include <string>
 
-struct ICommand
+namespace Zuravvski
 {
-	// Marker interface
-	virtual ~ICommand() noexcept = default;
-};
+	namespace Demo
+	{
+		struct ICommand
+		{
+			// Marker interface
+			virtual ~ICommand() noexcept = default;
+		};
 
-struct Register : ICommand
-{
-	std::string login;
-	std::string password;
-	std::string salt;
-};
+		struct Register : ICommand
+		{
+			std::string login;
+			std::string password;
+			std::string salt;
+		};
 
-struct BrowseUsers : ICommand
-{
-	// Parameterless command
-};
+		struct BrowseUsers : ICommand
+		{
+			// Parameterless command
+		};
+	}
+}

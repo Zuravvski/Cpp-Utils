@@ -25,10 +25,15 @@ struct Zuravvski::Utils::Enum<SampleEnum>
 	static EnumMap<SampleEnum> Mapping() noexcept
 	{
 		static EnumMap<SampleEnum> enumMap;
+		static bool initialized = false;
 
-		enumMap.insert({ SampleEnum::Tic, "Tic" });
-		enumMap.insert({ SampleEnum::Tac, "Tac" });
-		enumMap.insert({ SampleEnum::Toe, "Toe" });
+		if (!initialized)
+		{
+			enumMap.insert({ SampleEnum::Tic, "Tic" });
+			enumMap.insert({ SampleEnum::Tac, "Tac" });
+			enumMap.insert({ SampleEnum::Toe, "Toe" });
+			initialized = true;
+		}
 
 		return enumMap;
 	}

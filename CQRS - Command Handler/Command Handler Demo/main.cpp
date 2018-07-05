@@ -4,6 +4,8 @@
 
 std::shared_ptr<Hypodermic::Container> CreateContainer()
 {
+	using namespace Zuravvski::Demo;
+
 	Hypodermic::ContainerBuilder containerBuilder;
 	containerBuilder.registerType<InMemoryUserRepository>().as<IUserRepository>().singleInstance();
 	containerBuilder.registerType<RegisterHandler>().as<ICommandHandler<Register>>();
@@ -13,6 +15,8 @@ std::shared_ptr<Hypodermic::Container> CreateContainer()
 
 auto main(int argc, char** argv) -> int
 {
+	using namespace Zuravvski::Demo;
+
 	const auto container = CreateContainer();
 
 	// Create the bus

@@ -130,9 +130,7 @@
   <ItemGroup>
     <ClInclude Include="CommandBus.h" />
     <ClInclude Include="Commands.h" />
-    <ClInclude Include="di.h" />
     <ClInclude Include="Handlers.h" />
-    <ClInclude Include="Injector.h" />
     <ClInclude Include="Repositories.h" />
     <ClInclude Include="User.h" />
   </ItemGroup>

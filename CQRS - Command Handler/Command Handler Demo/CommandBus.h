@@ -5,52 +5,58 @@
 #include <Hypodermic/ComponentContext.h>
 #include "Handlers.h"
 
-struct ICommandBus
+namespace Zuravvski 
 {
-	// TODO: To be implemented
-	// Type erasure is probably needed to marry template and virtual method
-	// Maybe CRTP?
-	virtual ~ICommandBus() noexcept = default;
-};
-
-class CommandBus : public ICommandBus
-{
-public:
-	CommandBus(std::shared_ptr<Hypodermic::Container> componentContext) :
-		componentContext_(componentContext)
+	namespace Demo
 	{
-	}
-
-	template<typename T, typename = std::enable_if_t<std::is_base_of<ICommand, std::decay_t<T>>::value>>
-	std::future<void> Dispatch(std::unique_ptr<T> command)
-	{
-		if (!command)
+		struct ICommandBus
 		{
-			throw std::runtime_error{ "The command is nullptr" };
-		}
+			// TODO: To be implemented
+			// Type erasure is probably needed to marry template and virtual method
+			// Maybe CRTP?
+			virtual ~ICommandBus() noexcept = default;
+		};
 
-		return std::async(std::launch::async, [command = std::move(command), this]() mutable
+		class CommandBus : public ICommandBus
 		{
-			const auto commandName = typeid(*command).name();
-
-			try
+		public:
+			CommandBus(std::shared_ptr<Hypodermic::Container> componentContext) :
+				componentContext_(componentContext)
 			{
-				const auto handler = componentContext_->resolve<ICommandHandler<T>>();
-				
-				if (handler)
+			}
+
+			template<typename T, typename = std::enable_if_t<std::is_base_of<ICommand, std::decay_t<T>>::value>>
+			std::future<void> Dispatch(std::unique_ptr<T> command)
+			{
+				if (!command)
 				{
-					handler->Handle(std::move(command)).get();
+					throw std::runtime_error{ "The command is nullptr" };
 				}
 
-			}
-			catch (std::exception& e)
-			{
-				std::cerr << "Error has occured while executing the command " << commandName << std::endl;
-				std::cerr << "Message: " << e.what() << std::endl;
-			}
-		});
-	}
+				return std::async(std::launch::async, [command = std::move(command), this]() mutable
+				{
+					const auto commandName = typeid(*command).name();
 
-private:
-	std::shared_ptr<Hypodermic::Container> componentContext_;
-};
+					try
+					{
+						const auto handler = componentContext_->resolve<ICommandHandler<T>>();
+
+						if (handler)
+						{
+							handler->Handle(std::move(command)).get();
+						}
+
+					}
+					catch (std::exception& e)
+					{
+						std::cerr << "Error has occured while executing the command " << commandName << std::endl;
+						std::cerr << "Message: " << e.what() << std::endl;
+					}
+				});
+			}
+
+		private:
+			std::shared_ptr<Hypodermic::Container> componentContext_;
+		};
+	}
+}

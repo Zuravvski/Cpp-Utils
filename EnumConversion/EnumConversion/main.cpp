@@ -10,7 +10,7 @@ int main()
 	 * Enum -> String 
 	 */
 
-	// Explicit invokation
+	// Explicit invocation
 	std::cout << "1. Sample enum value to string: " << EnumUtils<SampleEnum>::ToString(SampleEnum::Tac) << std::endl;
 
 	// Implicit invokation (shorthand for the above)
@@ -20,11 +20,11 @@ int main()
 	 * String -> Enum
 	 */
 
-	// Explicit invokation
+	 //Explicit invocation
 	const auto tac = EnumUtils<SampleEnum>::FromString("Tac");
 	_ASSERT(tac == SampleEnum::Tac);
 
-	// Implicit invokation (shorthand for the above)
+	// Implicit invocation (shorthand for the above)
 	const auto tacShort = StringToEnum<SampleEnum>("Tac");
 	_ASSERT(tacShort == SampleEnum::Tac);
 
