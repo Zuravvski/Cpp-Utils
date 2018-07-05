@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Exceptions">
+      <UniqueIdentifier>{91523331-c376-4151-94c2-8125c6cb207c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils">
+      <UniqueIdentifier>{cc87f126-450e-40c0-af8d-06ef142cc5b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Registrations">
+      <UniqueIdentifier>{487af45d-2a0b-4213-b4ac-7437658e1212}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Traits">
+      <UniqueIdentifier>{1cdac7ca-0711-446a-a314-f8b96c322bae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TypeAlias">
+      <UniqueIdentifier>{ad561a29-8775-4f72-8b5e-c8bde9a15bba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Logging">
+      <UniqueIdentifier>{b98aa5d9-7823-4a07-903e-a4a1b074c453}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Typedefs">
+      <UniqueIdentifier>{25f1fb95-b086-4430-9f03-77cad57d89e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scopes">
+      <UniqueIdentifier>{4191b0ad-f435-4c63-9a8a-c4e23dc98d53}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Descriptors">
+      <UniqueIdentifier>{51eb1278-0ba3-4344-b6fe-fd42768d0868}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Descriptors\Operations">
+      <UniqueIdentifier>{8f2e767c-c58c-41c3-ae3e-2cb1ec659f2f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Descriptors\Tags">
+      <UniqueIdentifier>{384ee7f0-5f39-4182-9702-20a38917da40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Activators">
+      <UniqueIdentifier>{94742c69-1098-4336-82c3-9a3c8ab862af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resolution">
+      <UniqueIdentifier>{e65672a5-952e-47dc-abfd-870eb2731c2c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Meta">
+      <UniqueIdentifier>{56d788e1-dab3-49e9-b780-07fb6f159f1c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Container.h" />
+    <ClInclude Include="RegistrationDescriptorBase.h">
+      <Filter>Descriptors</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerBuilder.h" />
+    <ClInclude Include="ExceptionBase.h">
+      <Filter>Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="RegistrationException.h">
+      <Filter>Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="ProvidedInstanceRegistrationDescriptor.h">
+      <Filter>Descriptors</Filter>
+    </ClInclude>
+    <ClInclude Include="IRegistrationDescriptor.h">
+      <Filter>Descriptors</Filter>
+    </ClInclude>
+    <ClInclude Include="RegistrationDescriptorInfo.h">
+      <Filter>Descriptors</Filter>
+    </ClInclude>
+    <ClInclude Include="As.h">
+      <Filter>Descriptors\Operations</Filter>
+    </ClInclude>
+    <ClInclude Include="AsSelf.h">
+      <Filter>Descriptors\Operations</Filter>
+    </ClInclude>
+    <ClInclude Include="SingleInstance.h">
+      <Filter>Descriptors\Operations</Filter>
+    </ClInclude>
+    <ClInclude Include="With.h">
+      <Filter>Descriptors\Operations</Filter>
+    </ClInclude>
+    <ClInclude Include="CircularDependencyException.h">
+      <Filter>Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="TypeInfo.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="InstanceAlreadyActivatingException.h">
+      <Filter>Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="Registration.h">
+      <Filter>Registrations</Filter>
+    </ClInclude>
+    <ClInclude Include="IRegistration.h">
+      <Filter>Registrations</Filter>
+    </ClInclude>
+    <ClInclude Include="ConstructorDescriptor.h">
+      <Filter>Traits</Filter>
+    </ClInclude>
+    <ClInclude Include="ProvidedInstanceRegistration.h">
+      <Filter>Registrations</Filter>
+    </ClInclude>
+    <ClInclude Include="PersistentInstanceRegistration.h">
+      <Filter>Registrations</Filter>
+    </ClInclude>
+    <ClInclude Include="RegistrationBuilder.h">
+      <Filter>Registrations</Filter>
+    </ClInclude>
+    <ClInclude Include="RegistrationDescriptorBuilder.h">
+      <Filter>Descriptors</Filter>
+    </ClInclude>
+    <ClInclude Include="RegistrationScope.h">
+      <Filter>Scopes</Filter>
+    </ClInclude>
+    <ClInclude Include="IRegistrationScope.h">
+      <Filter>Scopes</Filter>
+    </ClInclude>
+    <ClInclude Include="NestedRegistrationScope.h">
+      <Filter>Scopes</Filter>
+    </ClInclude>
+    <ClInclude Include="TypeAlias.h">
+      <Filter>TypeAlias</Filter>
+    </ClInclude>
+    <ClInclude Include="TypeAliasKey.h">
+      <Filter>TypeAlias</Filter>
+    </ClInclude>
+    <ClInclude Include="ITypeAlias.h">
+      <Filter>TypeAlias</Filter>
+    </ClInclude>
+    <ClInclude Include="LogLevel.h">
+      <Filter>Logging</Filter>
+    </ClInclude>
+    <ClInclude Include="Log.h">
+      <Filter>Logging</Filter>
+    </ClInclude>
+    <ClInclude Include="Logger.h">
+      <Filter>Logging</Filter>
+    </ClInclude>
+    <ClInclude Include="ILoggerSink.h">
+      <Filter>Logging</Filter>
+    </ClInclude>
+    <ClInclude Include="NoopLoggerSink.h">
+      <Filter>Logging</Filter>
+    </ClInclude>
+    <ClInclude Include="DependencyActivationException.h">
+      <Filter>Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="OnActivated.h">
+      <Filter>Descriptors\Operations</Filter>
+    </ClInclude>
+    <ClInclude Include="RegistrationDescriptorInfoToString.h">
+      <Filter>Descriptors</Filter>
+    </ClInclude>
+    <ClInclude Include="InstanceRegistrationTags.h">
+      <Filter>Descriptors\Tags</Filter>
+    </ClInclude>
+    <ClInclude Include="DependencyFactoryTag.h">
+      <Filter>Descriptors\Tags</Filter>
+    </ClInclude>
+    <ClInclude Include="ProvidedInstanceDependencyTag.h">
+      <Filter>Descriptors\Tags</Filter>
+    </ClInclude>
+    <ClInclude Include="ProvidedDependencyTag.h">
+      <Filter>Descriptors\Tags</Filter>
+    </ClInclude>
+    <ClInclude Include="ConsoleLoggerSink.h">
+      <Filter>Logging</Filter>
+    </ClInclude>
+    <ClInclude Include="ProvidedInstanceFactoryRegistrationDescriptor.h">
+      <Filter>Descriptors</Filter>
+    </ClInclude>
+    <ClInclude Include="ConstructorTypologyDeducer.h">
+      <Filter>Traits</Filter>
+    </ClInclude>
+    <ClInclude Include="IntegerSequence.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="ArgumentPack.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="AutowireableConstructor.h">
+      <Filter>Traits</Filter>
+    </ClInclude>
+    <ClInclude Include="AnyArgument.h">
+      <Filter>Traits</Filter>
+    </ClInclude>
+    <ClInclude Include="AutowireableConstructorRegistrationDescriptor.h">
+      <Filter>Descriptors</Filter>
+    </ClInclude>
+    <ClInclude Include="ArgumentResolver.h">
+      <Filter>Traits</Filter>
+    </ClInclude>
+    <ClInclude Include="InstanceLifetime.h">
+      <Filter>Descriptors</Filter>
+    </ClInclude>
+    <ClInclude Include="Config.h" />
+    <ClInclude Include="IsSupportedArgument.h">
+      <Filter>Traits</Filter>
+    </ClInclude>
+    <ClInclude Include="RuntimeRegistrationBuilder.h">
+      <Filter>Registrations</Filter>
+    </ClInclude>
+    <ClInclude Include="IRuntimeRegistrationBuilder.h">
+      <Filter>Registrations</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerInstanceRegistration.h">
+      <Filter>Registrations</Filter>
+    </ClInclude>
+    <ClInclude Include="IsComplete.h">
+      <Filter>Traits</Filter>
+    </ClInclude>
+    <ClInclude Include="TypeAliases.h">
+      <Filter>Typedefs</Filter>
+    </ClInclude>
+    <ClInclude Include="DependencyFactories.h">
+      <Filter>Typedefs</Filter>
+    </ClInclude>
+    <ClInclude Include="InstanceFactory.h">
+      <Filter>Typedefs</Filter>
+    </ClInclude>
+    <ClInclude Include="DependencyFactory.h">
+      <Filter>Typedefs</Filter>
+    </ClInclude>
+    <ClInclude Include="ActivationHandler.h">
+      <Filter>Typedefs</Filter>
+    </ClInclude>
+    <ClInclude Include="ActivationHandlers.h">
+      <Filter>Typedefs</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerInstanceRegistrationActivator.h">
+      <Filter>Activators</Filter>
+    </ClInclude>
+    <ClInclude Include="IRegistrationActivator.h">
+      <Filter>Activators</Filter>
+    </ClInclude>
+    <ClInclude Include="ProvidedInstanceRegistrationActivator.h">
+      <Filter>Activators</Filter>
+    </ClInclude>
+    <ClInclude Include="RegistrationActivator.h">
+      <Filter>Activators</Filter>
+    </ClInclude>
+    <ClInclude Include="RegistrationContext.h">
+      <Filter>Scopes</Filter>
+    </ClInclude>
+    <ClInclude Include="ActivationException.h">
+      <Filter>Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="ComponentContext.h" />
+    <ClInclude Include="IResolutionContainer.h">
+      <Filter>Resolution</Filter>
+    </ClInclude>
+    <ClInclude Include="ActivationRegistry.h">
+      <Filter>Resolution</Filter>
+    </ClInclude>
+    <ClInclude Include="ResolutionContext.h">
+      <Filter>Resolution</Filter>
+    </ClInclude>
+    <ClInclude Include="ResolutionContainer.h">
+      <Filter>Resolution</Filter>
+    </ClInclude>
+    <ClInclude Include="ResolutionInfo.h">
+      <Filter>Resolution</Filter>
+    </ClInclude>
+    <ClInclude Include="ActivatedRegistrationInfo.h">
+      <Filter>Resolution</Filter>
+    </ClInclude>
+    <ClInclude Include="ActivationResult.h">
+      <Filter>Resolution</Filter>
+    </ClInclude>
+    <ClInclude Include="PointerAlignment.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="IResolutionContext.h">
+      <Filter>Resolution</Filter>
+    </ClInclude>
+    <ClInclude Include="MetaMap.h">
+      <Filter>Meta</Filter>
+    </ClInclude>
+    <ClInclude Include="MetaIdentity.h">
+      <Filter>Meta</Filter>
+    </ClInclude>
+    <ClInclude Include="MetaPair.h">
+      <Filter>Meta</Filter>
+    </ClInclude>
+    <ClInclude Include="MetaInsert.h">
+      <Filter>Meta</Filter>
+    </ClInclude>
+    <ClInclude Include="MetaContains.h">
+      <Filter>Meta</Filter>
+    </ClInclude>
+    <ClInclude Include="MetaForEach.h">
+      <Filter>Meta</Filter>
+    </ClInclude>
+    <ClInclude Include="FactoryWrapper.h" />
+    <ClInclude Include="UseIfNone.h">
+      <Filter>Descriptors\Operations</Filter>
+    </ClInclude>
+    <ClInclude Include="Named.h">
+      <Filter>Descriptors\Operations</Filter>
+    </ClInclude>
+    <ClInclude Include="NamedTypeAlias.h">
+      <Filter>TypeAlias</Filter>
+    </ClInclude>
+    <ClInclude Include="Hypodermic.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Hypodermic.cpp" />
+  </ItemGroup>
+</Project>

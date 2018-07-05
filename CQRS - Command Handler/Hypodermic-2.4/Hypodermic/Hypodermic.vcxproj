@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{8DBC5914-BB29-46A9-B50C-4C37EA34C849}</ProjectGuid>
+    <RootNamespace>Hypodermic</RootNamespace>
+    <ProjectName>Hypodermic</ProjectName>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\boost.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\boost.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\boost.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\boost.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>..\lib\$(Configuration)_$(Platform)_$(PlatformToolset)\$(ProjectName)\</OutDir>
+    <IntDir>..\obj\$(Configuration)_$(Platform)_$(PlatformToolset)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>..\lib\$(Configuration)_$(Platform)_$(PlatformToolset)\$(ProjectName)\</OutDir>
+    <IntDir>..\obj\$(Configuration)_$(Platform)_$(PlatformToolset)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>..\lib\$(Configuration)_$(Platform)_$(PlatformToolset)\$(ProjectName)\</OutDir>
+    <IntDir>..\obj\$(Configuration)_$(Platform)_$(PlatformToolset)\$(ProjectName)\</IntDir>
+    <TargetName>$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>..\lib\$(Configuration)_$(Platform)_$(PlatformToolset)\$(ProjectName)\</OutDir>
+    <IntDir>..\obj\$(Configuration)_$(Platform)_$(PlatformToolset)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <MinimalRebuild>false</MinimalRebuild>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <AdditionalIncludeDirectories>..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <MinimalRebuild>false</MinimalRebuild>
+      <PreprocessorDefinitions>_DEBUG;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <AdditionalIncludeDirectories>..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <AdditionalIncludeDirectories>..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <AdditionalIncludeDirectories>..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="ActivationResult.h" />
+    <ClInclude Include="ActivationException.h" />
+    <ClInclude Include="ActivationHandler.h" />
+    <ClInclude Include="ActivationHandlers.h" />
+    <ClInclude Include="ActivatedRegistrationInfo.h" />
+    <ClInclude Include="ActivationRegistry.h" />
+    <ClInclude Include="FactoryWrapper.h" />
+    <ClInclude Include="Hypodermic.h" />
+    <ClInclude Include="IResolutionContext.h" />
+    <ClInclude Include="MetaContains.h" />
+    <ClInclude Include="MetaForEach.h" />
+    <ClInclude Include="MetaIdentity.h" />
+    <ClInclude Include="MetaInsert.h" />
+    <ClInclude Include="MetaMap.h" />
+    <ClInclude Include="MetaPair.h" />
+    <ClInclude Include="Named.h" />
+    <ClInclude Include="NamedTypeAlias.h" />
+    <ClInclude Include="PointerAlignment.h" />
+    <ClInclude Include="UseIfNone.h" />
+    <ClInclude Include="ResolutionInfo.h" />
+    <ClInclude Include="AnyArgument.h" />
+    <ClInclude Include="ArgumentResolver.h" />
+    <ClInclude Include="ArgumentPack.h" />
+    <ClInclude Include="As.h" />
+    <ClInclude Include="AsSelf.h" />
+    <ClInclude Include="AutowireableConstructor.h" />
+    <ClInclude Include="AutowireableConstructorRegistrationDescriptor.h" />
+    <ClInclude Include="CircularDependencyException.h" />
+    <ClInclude Include="ComponentContext.h" />
+    <ClInclude Include="Config.h" />
+    <ClInclude Include="ConsoleLoggerSink.h" />
+    <ClInclude Include="ConstructorDescriptor.h" />
+    <ClInclude Include="ConstructorTypologyDeducer.h" />
+    <ClInclude Include="Container.h" />
+    <ClInclude Include="ContainerBuilder.h" />
+    <ClInclude Include="ContainerInstanceRegistration.h" />
+    <ClInclude Include="ContainerInstanceRegistrationActivator.h" />
+    <ClInclude Include="DependencyActivationException.h" />
+    <ClInclude Include="DependencyFactories.h" />
+    <ClInclude Include="DependencyFactory.h" />
+    <ClInclude Include="DependencyFactoryTag.h" />
+    <ClInclude Include="ExceptionBase.h" />
+    <ClInclude Include="ILoggerSink.h" />
+    <ClInclude Include="InstanceAlreadyActivatingException.h" />
+    <ClInclude Include="InstanceFactory.h" />
+    <ClInclude Include="InstanceLifetime.h" />
+    <ClInclude Include="IntegerSequence.h" />
+    <ClInclude Include="IRegistration.h" />
+    <ClInclude Include="IRegistrationActivator.h" />
+    <ClInclude Include="IRegistrationDescriptor.h" />
+    <ClInclude Include="IRegistrationScope.h" />
+    <ClInclude Include="IResolutionContainer.h" />
+    <ClInclude Include="IRuntimeRegistrationBuilder.h" />
+    <ClInclude Include="IsComplete.h" />
+    <ClInclude Include="IsSupportedArgument.h" />
+    <ClInclude Include="ITypeAlias.h" />
+    <ClInclude Include="Log.h" />
+    <ClInclude Include="Logger.h" />
+    <ClInclude Include="LogLevel.h" />
+    <ClInclude Include="NestedRegistrationScope.h" />
+    <ClInclude Include="NoopLoggerSink.h" />
+    <ClInclude Include="OnActivated.h" />
+    <ClInclude Include="PersistentInstanceRegistration.h" />
+    <ClInclude Include="ProvidedDependencyTag.h" />
+    <ClInclude Include="ProvidedInstanceDependencyTag.h" />
+    <ClInclude Include="ProvidedInstanceRegistration.h" />
+    <ClInclude Include="ProvidedInstanceRegistrationActivator.h" />
+    <ClInclude Include="ProvidedInstanceRegistrationDescriptor.h" />
+    <ClInclude Include="ProvidedInstanceFactoryRegistrationDescriptor.h" />
+    <ClInclude Include="RegistrationActivator.h" />
+    <ClInclude Include="RegistrationBuilder.h" />
+    <ClInclude Include="RegistrationDescriptorBase.h" />
+    <ClInclude Include="RegistrationDescriptorBuilder.h" />
+    <ClInclude Include="RegistrationDescriptorInfo.h" />
+    <ClInclude Include="RegistrationDescriptorInfoToString.h" />
+    <ClInclude Include="RegistrationException.h" />
+    <ClInclude Include="RegistrationScope.h" />
+    <ClInclude Include="RegistrationContext.h" />
+    <ClInclude Include="ResolutionContainer.h" />
+    <ClInclude Include="ResolutionContext.h" />
+    <ClInclude Include="RuntimeRegistrationBuilder.h" />
+    <ClInclude Include="SingleInstance.h" />
+    <ClInclude Include="InstanceRegistrationTags.h" />
+    <ClInclude Include="TypeAlias.h" />
+    <ClInclude Include="TypeAliases.h" />
+    <ClInclude Include="TypeAliasKey.h" />
+    <ClInclude Include="TypeInfo.h" />
+    <ClInclude Include="Registration.h" />
+    <ClInclude Include="With.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Hypodermic.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="..\packages\boost.1.67.0.0\build\boost.targets" Condition="Exists('..\packages\boost.1.67.0.0\build\boost.targets')" />
+  </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\boost.1.67.0.0\build\boost.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost.1.67.0.0\build\boost.targets'))" />
+  </Target>
+</Project>
